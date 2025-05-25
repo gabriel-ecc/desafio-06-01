@@ -1,6 +1,8 @@
 # Comandos validos
-node index.js registrar <nombre> <edad> <animal> <color> <enfermedad>
-node index.js leer
+```bash
+- node index.js registrar <nombre> <edad> <animal> <color> <enfermedad>
+- node index.js leer
+```
 
 ---
 
