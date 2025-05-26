@@ -36,7 +36,7 @@ function leerRegistros() {
     return JSON.parse(data);
   } catch (error) {
     if (error.code === "ENOENT") {
-      return []; // Return empty array if file doesn't exist
+      return [];
     }
     console.error("Error al leer el archivo de registros:", error);
     return [];
@@ -44,11 +44,11 @@ function leerRegistros() {
 }
 
 function guardarRegistros(citas) {
-    try {
-        fs.writeFileSync(_pathName, JSON.stringify(citas));
-    } catch (error) {
-        console.error('Error al guardar el archivo de registros:', error);
-    }
+  try {
+    fs.writeFileSync(_pathName, JSON.stringify(citas));
+  } catch (error) {
+    console.error("Error al guardar el archivo de registros:", error);
+  }
 }
 
 module.exports = { mostrarCitas, registrarCita };
