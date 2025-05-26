@@ -4,7 +4,7 @@ const args = process.argv.slice(2);
 const comando = args[0];
 
 if(comando === 'registrar'){
-    if (args.length < 5) {
+    if (args.length < 6) {
         console.log('Uso: node index.js registrar <nombre> <edad> <animal> <color> <enfermedad>');
     }else{
         registrarCita(args[1], args[2], args[3], args[4], args[5]);
