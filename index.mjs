@@ -1,4 +1,4 @@
-const { mostrarCitas, registrarCita } = require("./operaciones.js");
+import { mostrarCitas, registrarCita } from "./operaciones.mjs";
 
 const args = process.argv.slice(2);
 const comando = args[0];

@@ -1,10 +1,10 @@
-const fs = require("fs");
+import fs from "fs";
 const _pathName = "citas.json";
 
 const mostrarCitas = () => {
   console.log("Citas registradas:");
   const citas = fs.readFileSync(_pathName, "utf8");
-  data = JSON.parse(citas);
+  const data = JSON.parse(citas);
   if (data.length === 0) {
     console.log("No hay registros para mostrar.");
   } else {
@@ -51,4 +51,4 @@ function guardarRegistros(citas) {
   }
 }
 
-module.exports = { mostrarCitas, registrarCita };
+export { mostrarCitas, registrarCita };
